@@ -8,4 +8,4 @@ I'm sure there are a million random number generators online and this is my vers
 * Choose whether the numbers should be unique
 * Generate!
 
-Not very exciting, but it was the first thing I wrote (I wonder why :)), initially just as a terminal program, then later converted to Tkinter.
+Not very exciting, but it was the first thing I wrote (I wonder why :smile:)), initially just as a terminal program, then later converted to Tkinter.
