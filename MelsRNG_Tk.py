@@ -37,7 +37,7 @@ def generate_numbers():
     text_file = os.path.expanduser("~/Desktop/random_numbers.txt")
     with open(text_file, "a") as data_file:  # Save to text file
         data_file.write(str_convert + "\n")
-    output_label.config(text="File saved as 'random numbers.txt'")
+    output_label.config(text=f"File saved as {text_file}")
     return output
 
 
@@ -130,4 +130,3 @@ button.grid(columnspan=4, row=4)
 button.config(borderwidth=4, background=GUI_COLOUR, highlightbackground="black", activebackground="lightskyblue")
 
 window.mainloop()
-
