@@ -9,3 +9,6 @@ I'm sure there are a million random number generators online and this is my vers
 * Generate!
 
 Not very exciting, but it was the first thing I wrote (I wonder why :smile:), initially just as a terminal program, then later converted to Tkinter.
+
+Requirements:
+python3-tk
