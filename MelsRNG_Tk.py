@@ -3,10 +3,18 @@ import tkinter
 from tkinter import messagebox
 from random import *
 import os
+from datetime import datetime
 
 GUI_COLOUR = "lavender"
 
 rand_numbers = []  # final output
+
+dt = datetime.now()
+date_format = "%d/%m/%Y"
+time_format = "%H:%M:%S"
+text_file = os.path.expanduser("~/Desktop/random_numbers.txt")
+with open(text_file, "a") as tf:  # Add today's date
+    tf.write(f"\nNumbers generated on {dt.strftime(date_format)} at {dt.strftime(time_format)} \n\n")
 
 # ------------------------- PASSWORD GENERATOR ---------------------------- #
 
@@ -34,7 +42,6 @@ def generate_numbers():
     rand_numbers.sort()
     str_convert = (', '.join(map(str, rand_numbers)))  # Convert to a string so you can get rid of the square brackets
     output = final_numbers.config(text=f"{str_convert}")
-    text_file = os.path.expanduser("~/Desktop/random_numbers.txt")
     with open(text_file, "a") as data_file:  # Save to text file
         data_file.write(str_convert + "\n")
     output_label.config(text=f"File saved as {text_file}")
